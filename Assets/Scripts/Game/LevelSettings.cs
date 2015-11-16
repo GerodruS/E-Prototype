@@ -26,6 +26,16 @@ public class LevelSettings : MonoBehaviour
     }
 
     [System.Serializable]
+    public struct HeroMoving
+    {
+        /// <summary>
+        /// Коэффициент увеличения скорости при переключении направления без касания крайних позиций 
+        /// </summary>
+        [Tooltip("Коэффициент увеличения скорости при переключении направления без касания крайних позиций")]
+        public float switchSpeedMultiplier;
+    }
+
+    [System.Serializable]
     public struct Block
     {
         /// <summary>
@@ -139,6 +149,12 @@ public class LevelSettings : MonoBehaviour
     {
         speed = 1.0f,
         position = Start.Position.Left
+    };
+
+    [Space(10.0f)]
+    public HeroMoving heroMoving = new HeroMoving()
+    {
+        switchSpeedMultiplier = 1.0f,
     };
 
     /// <summary>

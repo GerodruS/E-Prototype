@@ -42,8 +42,41 @@ MonoBehaviour:
   start:
     speed: 1
     position: 0
-  blocks: []
-  difficultyLevels: []
+  heroMoving:
+    switchSpeedMultiplier: 2
+  blocks:
+  - quantity: 0
+    difficultyLevel: 0
+    startSpeed: 2
+    endSpeed: 2.5
+    switchDelay: 1
+  - quantity: 2
+    difficultyLevel: 0
+    startSpeed: 3
+    endSpeed: 3.5
+    switchDelay: 2
+  - quantity: 4
+    difficultyLevel: 1
+    startSpeed: 4
+    endSpeed: 4.5
+    switchDelay: 3
+  difficultyLevels:
+  - sizeProbability:
+      antennaType: 1
+      ledgeType: 1
+      flagpoleType: 1
+      balconyType: 1
+      flagpoleWithRopeType: 1
+    sideProbability: 1
+    gapMultiplier: 7
+  - sizeProbability:
+      antennaType: 1
+      ledgeType: 1
+      flagpoleType: 1
+      balconyType: 1
+      flagpoleWithRopeType: 1
+    sideProbability: 1
+    gapMultiplier: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
