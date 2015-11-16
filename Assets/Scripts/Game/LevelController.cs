@@ -46,7 +46,7 @@ public class LevelController : MonoBehaviour
             {
                 var pos = barrierMover.transform.position;
                 pos.y = lastBarrierMover.transform.position.y - deltaPosition;
-                Debug.LogFormat("Position: {0} {1} {2}", barrierMover.transform.position, pos, lastBarrierMover.transform.position.y);
+                //Debug.LogFormat("Position: {0} {1} {2}", barrierMover.transform.position, pos, lastBarrierMover.transform.position.y);
                 barrierMover.transform.position = pos;
                 barrierMover.newStartPosition = pos;
                 //Debug.Break();
@@ -87,7 +87,7 @@ public class LevelController : MonoBehaviour
             {
                 while (barrierMover.enabled)
                 {
-                    Debug.Log("barrierMover enabled = " + barrierMover.enabled);
+                    //Debug.Log("barrierMover enabled = " + barrierMover.enabled);
                     yield return null;
                 }
             }

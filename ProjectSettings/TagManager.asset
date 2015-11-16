@@ -7,6 +7,8 @@ TagManager:
   - Colliders/Barrier
   - Colliders/Spawn Next
   - Barrier
+  - Colliders/Pigeon
+  - Colliders/Hero
   layers:
   - Default
   - TransparentFX

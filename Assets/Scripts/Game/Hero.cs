@@ -11,6 +11,7 @@ public class Hero : MonoBehaviour
     private Coroutine movingCoroutine = null;
     private Transform thisTransform;
     private float currentSpeedMultiplier = 0.0f;
+    private bool currentDirectionLeft = false;
 
     private void MoveTo(bool left)
     {
@@ -18,7 +19,10 @@ public class Hero : MonoBehaviour
         {
             StopCoroutine(movingCoroutine);
             movingCoroutine = null;
-            currentSpeedMultiplier *= levelController.levelSettings.heroMoving.switchSpeedMultiplier;
+            if (currentDirectionLeft != left)
+            {
+                currentSpeedMultiplier *= levelController.levelSettings.heroMoving.switchSpeedMultiplier;
+            }
         }
         else
         {
@@ -29,6 +33,7 @@ public class Hero : MonoBehaviour
 
     private IEnumerator MovingCoroutine(bool left)
     {
+        currentDirectionLeft = left;
         if (left)
         {
             float targetPosition = 0.0f;

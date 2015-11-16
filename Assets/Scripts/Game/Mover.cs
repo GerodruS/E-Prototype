@@ -149,6 +149,7 @@ public class Mover : MonoBehaviour
         thisTransform.position = startTransform.position;
         currentTime = 0.0f;
         spawnNext = false;
+        enabled = true;
     }
 
     private void Start()
@@ -175,7 +176,7 @@ public class Mover : MonoBehaviour
             }
             else
             {
-                Debug.Log("allTime <= currentTime");
+                //Debug.Log("allTime <= currentTime");
                 if (CallbackFinish != null)
                 {
                     CallbackFinish.Invoke(thisTransform.parent.gameObject);

@@ -8,5 +8,9 @@ public class HeroCollider : MonoBehaviour
         {
             Debug.Log("Boom!");
         }
+        else if (other.CompareTag("Colliders/Pigeon"))
+        {
+            Debug.Log("Pigeon catched!");
+        }
     }
 }
